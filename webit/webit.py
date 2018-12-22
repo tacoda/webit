@@ -17,13 +17,21 @@ import click
 
 from bucket import BucketManager
 
-session = boto3.Session()
-bucket_manager = BucketManager(session)
+session = None
+bucket_manager = None
 
 
 @click.group()
-def cli():
+@click.option('--profile', default=None,
+              help="Use a given AWS profile")
+def cli(profile):
     """WebIt deploys websites to AWS"""
+    global session, bucket_manager
+    session_cfg = {}
+    if profile:
+        session_cfg['profile_name'] = profile
+    session = boto3.Session(**session_cfg)
+    bucket_manager = BucketManager(session)
 
 
 @cli.command('list-buckets')
