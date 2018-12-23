@@ -52,6 +52,10 @@ class BucketManager:
             for obj in page.get('Contents', []):
                 self.manifest[obj['Key']] = obj['ETag']
 
+    def get_bucket(self, bucket_name):
+        """Get a bucket by name"""
+        return self.s3.Bucket(bucket_name)
+
     @staticmethod
     def hash_data(data):
         """Generate md5 hash for data"""

@@ -12,3 +12,4 @@ WebIt currently has the following features:
 - Create and set up bucket
 - Sync directory tree to bucket
 - Set AWS profile with `--profile=<profileName>`
+- Configure a Route 53 domain
