@@ -15,11 +15,11 @@ WebIt automates the process of deploying static websites to AWS.
 import boto3
 import click
 
-from bucket import BucketManager
-from domain import DomainManager
-from certificate import CertificateManager
-from cdn import DistributionManager
-import util
+from webit.bucket import BucketManager
+from webit.domain import DomainManager
+from webit.certificate import CertificateManager
+from webit.cdn import DistributionManager
+from webit import util
 
 session = None
 bucket_manager = None

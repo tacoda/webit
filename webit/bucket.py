@@ -10,7 +10,7 @@ import boto3
 from botocore.exceptions import ClientError
 
 from hashlib import md5
-import util
+from webit import util
 
 
 class BucketManager:
