@@ -13,3 +13,9 @@ WebIt currently has the following features:
 - Sync directory tree to bucket
 - Set AWS profile with `--profile=<profileName>`
 - Configure a Route 53 domain
+
+## Installation
+
+```sh
+pip3 install https://s3.amazonaws.com/tacoda-dist/webit/WebIt-0.1-py3-none-any.whl
+```
